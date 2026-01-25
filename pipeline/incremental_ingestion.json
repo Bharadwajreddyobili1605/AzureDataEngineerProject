@@ -131,7 +131,7 @@
 				}
 			},
 			{
-				"name": "updated_last_dcd",
+				"name": "updated_last_cdc",
 				"type": "Copy",
 				"state": "Inactive",
 				"onInactiveMarkAs": "Succeeded",
