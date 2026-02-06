@@ -9,6 +9,9 @@ The project follows the Medallion Architecture:
       Bronze (Raw Layer) – Raw ingested data stored in ADLS Gen2
       Silver (Cleaned Layer) – Transformed and deduplicated data
       Gold (Serving Layer) – Business-ready data models for reporting
+<img width="610" height="391" alt="image" src="https://github.com/user-attachments/assets/374f1d3c-0b55-4665-95dc-196ef4f5ee20" />
+
+
 
 ## Data Ingestion
 ### Source System
@@ -16,12 +19,12 @@ The project follows the Medallion Architecture:
 ### Ingestion Tool
     - Azure Data Factory (ADF)
 ### Ingestion Strategy
-    - The ingestion process is built to handle multiple real-world scenarios:
-    - Initial Load – Full load of historical data from Azure SQL Database
-    - Incremental Load – Loads only new or changed data
-    - Change Data Capture (CDC) – Captures inserts, updates, and deletes
-    - Backdated Refresh – Reloads historical data for a given date range
-    - Backfilling – Handles late-arriving or missing data
+The ingestion process is built to handle multiple real-world scenarios:
+- Initial Load – Full load of historical data from Azure SQL Database
+- Incremental Load – Loads only new or changed data
+- Change Data Capture (CDC) – Captures inserts, updates, and deletes
+- Backdated Refresh – Reloads historical data for a given date range
+- Backfilling – Handles late-arriving or missing data
 ADF pipelines are designed to be dynamic and parameterized, enabling reusable and flexible ingestion workflows.
 
 ## Bronze Layer (Raw)
@@ -52,7 +55,9 @@ Medallion architecture implementation
  - Azure Data Factory (ADF) – Data ingestion and orchestration
  - Azure Data Lake Storage Gen2 (ADLS Gen2) – Data storage
  - Azure Databricks – Data processing and transformations
- - Delta Lake / Delta Live Tables – Declarative p
+ - Delta Lake / Delta Live Tables – Declarative pielines
+ <img width="690" height="263" alt="image" src="https://github.com/user-attachments/assets/6a37a343-7b36-4aac-9768-b4008d30332a" />
+
 
 
 
