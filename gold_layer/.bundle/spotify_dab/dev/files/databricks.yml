@@ -1,0 +1,25 @@
+# This is a Databricks asset bundle definition for spotify_dab.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: spotify_dab
+  uuid: 1cfb1154-3972-42dd-bc4a-d2fa1b1d5551
+
+
+
+targets:
+  dev:    
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405605492407097.17.azuredatabricks.net
+    presets:
+      source_linked_deployment: false
+    
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-7405605492407097.17.azuredatabricks.net   
+      root_path: /Workspace/PROD/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - user_name: 21btrcs135@jainuniversity.ac.in
+        level: CAN_MANAGE
